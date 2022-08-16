@@ -3,12 +3,8 @@
 
 int main(void)
 {
-	int n = 0;
-
-	n = _printf("%%\n");
-	printf("N: %d\n", n);
-	n = printf("%%\n");
-	printf("N: %d\n", n);
+	_printf("Hello %i\n", "World");
+	//printf("Hello %i\n", "World");
 
 	return (0);
 }
