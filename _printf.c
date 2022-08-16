@@ -9,6 +9,7 @@
 int _print_char(va_list args)
 {
 	char c = va_arg(args, int);
+
 	return (_putchar(c));
 }
 
@@ -21,6 +22,7 @@ int _print_str(va_list args)
 {
 	int k = 0;
 	char *s = va_arg(args, char *);
+
 	while (s[k] != '\0')
 	{
 		_putchar(s[k]);
@@ -37,6 +39,7 @@ int _print_str(va_list args)
 int _print_int(va_list args)
 {
 	int n = va_arg(args, int);
+
 	return (0);
 }
 
@@ -45,7 +48,7 @@ int _print_int(va_list args)
  * @c: character
  * Return: pointer
  */
-int (* _select_func(char c))(va_list)
+int (*_select_func(char c))(va_list)
 {
 	if (c == 'c')
 		return (_print_char);
